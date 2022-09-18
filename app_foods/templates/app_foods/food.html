@@ -5,10 +5,11 @@
 {% if food is not None %}
 <div>
     <h3>{{food.title}}</h3>
-    <p>{{food.price}} บาท</p>
+    <p>{{food.price|floatformat:'g'}} บาท</p>
     {% if food.is_premium %}
     <p>*** เมนูพิเศษสุด Premium</p>
     {% endif %}
+    <p>โปรโมชั่นถึงวันที่ {{ food.promotion_end_at|date:'j N Y'}}</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate, placeat accusantium amet sapiente eius
         neque assumenda? Quibusdam porro nam sunt nesciunt ea, impedit provident enim excepturi perferendis at dolorum.
     </p>

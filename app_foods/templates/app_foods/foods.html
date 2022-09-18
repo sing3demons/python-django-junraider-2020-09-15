@@ -8,10 +8,11 @@
         <h3>
             <a href="{% url 'food' food.id %}">{{food.title}}</a>
         </h3>
-        <p>{{food.price}} บาท</p>
+        <p>{{food.price|floatformat:'g'}} บาท</p>
         {% if food.is_premium %}
         <p>*** เมนูพิเศษสุด Premium</p>
         {% endif %}
+        <p>โปรโมชั่นถึงวันที่ {{ food.promotion_end_at|date:'j N Y'}}</p>
     </div>
     {% empty %}
     <p>ไม่มีข้อมูล</p>
