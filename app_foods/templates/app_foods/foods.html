@@ -3,6 +3,18 @@
 {% block content %}
 <div>
     <h2>เมนูอร่อย ส่งบ่อย ส่งแม่น</h2>
-
+    {% for food in foods %}
+    <div style="background-color: pink;">
+        <h3>
+            <a href="{% url 'food' food.id %}">{{food.title}}</a>
+        </h3>
+        <p>{{food.price}} บาท</p>
+        {% if food.is_premium %}
+        <p>*** เมนูพิเศษสุด Premium</p>
+        {% endif %}
+    </div>
+    {% empty %}
+    <p>ไม่มีข้อมูล</p>
+    {% endfor %}
 </div>
 {% endblock %}
