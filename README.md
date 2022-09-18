@@ -37,16 +37,16 @@ django-admin startproject project_jrd .
  1. create database gjango_junraide
  2. install mysql-connector-python
  ```install
- pip install mysql-connector-python
+ pip3 install mysql-connector-python==8.0.29
  ```
  3. Change settings.py DATABASES
  ```import mysql
- DATABASES = {
+DATABASES = {
     'default': {
-        'NAME': 'django_junraide',
+        'NAME': 'django_junraider',
         'ENGINE': 'mysql.connector.django',
-        'USER': 'sing_user',
-        'PASSWORD': 'my_password',
+        'USER': 'kpsing',
+        'PASSWORD': 'P@ssw0rd',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -55,5 +55,18 @@ django-admin startproject project_jrd .
  4. migrate
  ```migrate
  python manage.py migrate
+ ```
+
+
+ ## Database migration
+ ### app_foods create class models.py 
+ 1. create/edit model
+ 2. makemigrations
+ ```
+ python manage.py makemigrations app_foods
+ ```
+ 3. migrate
+ ```migrate
+  python manage.py migrate
  ```
 

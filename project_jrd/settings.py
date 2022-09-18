@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'project_jrd.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'django_junraide',
+        'NAME': 'django_junraider',
         'ENGINE': 'mysql.connector.django',
-        'USER': 'sing_user',
-        'PASSWORD': 'my_password',
+        'USER': 'kpsing',
+        'PASSWORD': 'P@ssw0rd',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -127,3 +127,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Authentication
+
+# AUTH_USER_MODEL = 'app_foods.Food'
+#              model name ↑z
