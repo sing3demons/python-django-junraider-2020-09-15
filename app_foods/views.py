@@ -5,8 +5,8 @@ from django.http.response import HttpResponse
 
 
 def home(request):
-    return HttpResponse("foods...")
+    return render(request, 'app_foods/foods.html')
 
 
 def food(request, food_id):
-    return HttpResponse('food id: '+str(food_id))
+    return render(request, 'app_foods/food.html', context={'food_id': food_id})
