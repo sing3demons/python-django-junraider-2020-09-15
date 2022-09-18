@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=my_password
+      - MYSQL_USER=sing_user
+      - MYSQL_PASSWORD=my_password
+      - MYSQL_DATABASE=django_junraide
+    ports:
+      - 3306:3306
+    volumes:
+      - ./my_data:/var/lib/mysql
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    depends_on:
+    - mysql
+    ports:
+      - 8080:8080
+  
