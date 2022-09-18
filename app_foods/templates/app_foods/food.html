@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foods</title>
-</head>
-<body>
-    {% include 'app_general/components/site_header.html' %}
-    <div>
-        <h2>food id: {{food_id}}</h2>
 
-    </div>
-    {% include 'app_general/components/site_footer.html' %}
-</body>
-</html>
+{% extends 'app_general/components/base.html' %}
+{% block site_title %}food = {{food_id}}  {% endblock %}
+{% block content %}
+<div>
+    <h2>food id: {{food_id}}</h2>
+
+</div>
+{% endblock %}
