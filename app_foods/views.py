@@ -4,7 +4,7 @@ from django.http.response import HttpResponse
 # Create your views here.
 
 
-def home(request):
+def foods(request):
     return render(request, 'app_foods/foods.html')
 
 
